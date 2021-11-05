@@ -14,4 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameWithAI.unity
     guid: 98f97c58ffffbb8438d0a00cd071e1ee
-  m_configObjects: {}
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 438351bf6e9b84449aa7b276b836cf40,
+      type: 2}
