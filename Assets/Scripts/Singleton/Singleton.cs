@@ -17,7 +17,6 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
-
     public static bool HasInstance
     {
         get { return _instance != null; }
@@ -36,7 +35,6 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             }
         }
     }
-
 
     virtual protected void Awake()
     {
