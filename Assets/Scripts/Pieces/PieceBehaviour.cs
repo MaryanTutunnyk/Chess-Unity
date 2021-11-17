@@ -64,15 +64,11 @@ public class PieceBehaviour : MonoBehaviour
         spriteRend.sprite = id == 0 ? spriteWhite : spriteBlack;
         child2D.SetActive(false);
     }
-    public void ChangeTo3D()
+
+    public void SwitchGraphicMode(bool orthographic)
     {
-        child3D.SetActive(true);
-        child2D.SetActive(false);
-    }
-    public void ChangeTo2D()
-    {
-        child2D.SetActive(true);
-        child3D.SetActive(false);
+        child2D.SetActive(orthographic);
+        child3D.SetActive(!orthographic);
     }
 
     public void ChangeMaterial(Material material)

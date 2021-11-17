@@ -9,6 +9,11 @@ using UnityEngine.SceneManagement;
 
 public class GameController : Singleton<GameController>
 {
+    private const string gameName = "Game";
+    private const string gameWithAIName = "GameWithAI";
+    private const string gameWithRealPlayerName = "GameWithRealPlayer";
+    private const string gameWithVirtualPlayerName = "GameWithVirtualPlayer";
+
     [SerializeField] private GameObject kingPrefab, queenPrefab, rookPrefab, bishopPrefab, knightPrefab, pawnPrefab;
 
     [SerializeField] private Material materialWhite, materialBlack;
@@ -25,28 +30,30 @@ public class GameController : Singleton<GameController>
 
     private Player playerOne, playerTwo;
     private Player actualPlayer, otherPlayer;
-    [SerializeField]
-    private Cinemachine.CinemachineVirtualCamera playerOneCamera, playerTwoCamera;
 
     private MiniMax miniMax;
     private List<PieceBehaviour> allPiecesBehaviour;
 
     private bool is3D = true;
-    [SerializeField] private Cinemachine.CinemachineVirtualCamera orthographicCamera;
 
-    [SerializeField] private bool twoPlayersGame;
+    [SerializeField] private CameraController cameraController;
 
     void Start()
     {
         playerOne = new Player(materialWhite, Player.PlayerType.HUMAN, 7);
 
-        if (twoPlayersGame)
+        string game = PlayerPrefs.GetString(gameName);
+        if (game == gameWithAIName)
+        {
+            playerTwo = new Player(materialBlack, Player.PlayerType.AI);
+        }
+        if (game == gameWithRealPlayerName)
         {
             playerTwo = new Player(materialBlack, Player.PlayerType.HUMAN, 7);
         }
-        else
+        if (game == gameWithVirtualPlayerName)
         {
-            playerTwo = new Player(materialBlack, Player.PlayerType.AI);
+
         }
 
         miniMax = new MiniMax();
@@ -56,8 +63,8 @@ public class GameController : Singleton<GameController>
 
         actualPlayer = playerOne;
         otherPlayer = playerTwo;
-        playerOneCamera.gameObject.SetActive(true);
-        playerTwoCamera.gameObject.SetActive(false);
+
+        cameraController.SwitchCamera(true);
 
         allPiecesBehaviour = new List<PieceBehaviour>(GameObject.FindObjectsOfType<PieceBehaviour>());
 
@@ -130,7 +137,6 @@ public class GameController : Singleton<GameController>
                 break;
         }
 
-
         var piece = ((GameObject)Instantiate(prefab)).GetComponent<PieceBehaviour>();
         piece.InitGraphics(player.ID);
         piece.ChangeMaterial(player.AsignedMaterial);
@@ -143,39 +149,23 @@ public class GameController : Singleton<GameController>
     public void ChangeGraphicMode()
     {
         is3D = !is3D;
-        if (is3D)
-        {
-            textButtonChange.text = "3D";
-            orthographicCamera.gameObject.SetActive(false);
-            Camera.main.orthographic = false;
 
-            for (int i = 0; i < allPiecesBehaviour.Count; i++)
-            {
-                if (allPiecesBehaviour[i] != null)
-                {
-                    allPiecesBehaviour[i].ChangeTo3D();
-                }
-            }
-        }
-        else
-        {
-            textButtonChange.text = "2D";
-            orthographicCamera.gameObject.SetActive(true);
-            Camera.main.orthographic = true;
+        cameraController.SwitchGraphicMode(!is3D);
 
-            for (int i = 0; i < allPiecesBehaviour.Count; i++)
+        for (int i = 0; i < allPiecesBehaviour.Count; i++)
+        {
+            if (allPiecesBehaviour[i] != null)
             {
-                if (allPiecesBehaviour[i] != null)
-                {
-                    allPiecesBehaviour[i].ChangeTo2D();
-                }
+                allPiecesBehaviour[i].SwitchGraphicMode(!is3D);
             }
         }
     }
+
     public void Reset()
     {
         SceneManager.LoadScene(0);
     }
+
     public void InstantiateQueen(Square square, Player player)
     {
         var piece = new Queen(queenValue, queenSquareTableValues, square, player);
@@ -187,16 +177,14 @@ public class GameController : Singleton<GameController>
             actualPlayer = playerTwo;
             otherPlayer = playerOne;
 
-            playerOneCamera.gameObject.SetActive(false);
-            playerTwoCamera.gameObject.SetActive(true);
+            cameraController.SwitchCamera(false);
         }
         else
         {
             actualPlayer = playerOne;
             otherPlayer = playerTwo;
 
-            playerOneCamera.gameObject.SetActive(true);
-            playerTwoCamera.gameObject.SetActive(false);
+            cameraController.SwitchCamera(true);
         }
     }
 
@@ -220,6 +208,8 @@ public class GameController : Singleton<GameController>
         else
         {
             cg.DOFade(1, 0.4f);
+            cg.interactable = true;
+            cg.blocksRaycasts = true;
             textEnd.text = "Гравець: " + otherPlayer.ID + " переміг";
         }
     }

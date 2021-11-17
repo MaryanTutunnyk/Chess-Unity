@@ -6,30 +6,46 @@ using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
-    [SerializeField] private Toggle twoPlayersGame;
-    [SerializeField] private Toggle gameWithComputer;
-    private void Start()
+    private const string gameName = "Game";
+    private const string gameWithAIName = "GameWithAI";
+    private const string gameWithRealPlayerName = "GameWithRealPlayer";
+    private const string gameWithVirtualPlayerName = "GameWithVirtualPlayer";
+
+    [SerializeField] private Toggle gameWithAI;
+    [SerializeField] private Toggle gameWithRealPlayer;
+    [SerializeField] private Toggle gameWithVirtualPlayer;
+
+    public void GameWithAISelect()
     {
-        twoPlayersGame.Select();
+        gameWithRealPlayer.Select();
     }
-    public void TwoPlayersGameSelect()
+
+    public void GameWithRealPlayerSelect()
     {
-        twoPlayersGame.Select();
+        gameWithRealPlayer.Select();
     }
-    public void GameWithComputerSelect()
+
+    public void GameWithVirtualPlayerSelect()
     {
-        gameWithComputer.Select();
+        gameWithVirtualPlayer.Select();
     }
 
     public void GoToGameScene()
     {
-        if (twoPlayersGame.isOn)
+        if (gameWithAI.isOn)
         {
-            SceneManager.LoadScene(1);
+            PlayerPrefs.SetString(gameName, gameWithAIName);
         }
-        if (gameWithComputer.isOn)
+        if (gameWithRealPlayer.isOn)
         {
-            SceneManager.LoadScene(2);
+            PlayerPrefs.SetString(gameName, gameWithRealPlayerName);
         }
+        if (gameWithVirtualPlayer.isOn)
+        {
+            PlayerPrefs.SetString(gameName, gameWithVirtualPlayerName);
+        }
+        PlayerPrefs.Save();
+
+        SceneManager.LoadScene(1);
     }
 }
