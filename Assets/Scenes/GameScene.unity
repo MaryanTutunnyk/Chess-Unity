@@ -1637,12 +1637,16 @@ MonoBehaviour:
   materialWhite: {fileID: 2100000, guid: 25837370e5f292743a1615279d11a7ad, type: 2}
   materialBlack: {fileID: 2100000, guid: aa4b96089830fae49996d3af0788ff7a, type: 2}
   cg: {fileID: 181291580}
-  endGameText: {fileID: 126309683}
+  textEnd: {fileID: 126309683}
+  textButtonChange: {fileID: 1623537566}
   queenValue: 999
   queenSquareTableValues: {fileID: 11400000, guid: 1f4c58ef2080fac469e5a5b63613b57d,
     type: 2}
-  cameraController: {fileID: 82105280}
+  playerOneCamera: {fileID: 1836113541}
+  playerTwoCamera: {fileID: 1093174309}
+  orthographicCamera: {fileID: 1267377137}
   twoPlayersGame: 1
+  cameraController: {fileID: 82105280}
 --- !u!4 &1736331168
 Transform:
   m_ObjectHideFlags: 0
