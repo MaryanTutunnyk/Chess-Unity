@@ -17,26 +17,27 @@ public class SquareBehaviour : MonoBehaviour
         this.square = new Square();
     }
 
-    void Start()
+    private void Start()
     {
         this.rend = this.GetComponent<Renderer>();
         originalColor = this.rend.sharedMaterial.GetColor("_BaseColor");
     }
 
-    private void OnMouseEnter()
-    {
-        if (!blockColor)
-        {
-            rend.material.SetColor("_BaseColor", hoverColor);
+    //private void OnMouseEnter()
+    //{
+    //    if (!blockColor)
+    //    {
+    //        rend.material.SetColor("_BaseColor", hoverColor);
+    //    }
+    //}
 
-        }
-    }
-
-    private void OnMouseExit()
-    {
-        if (!blockColor)
-            ResetColor();
-    }
+    //private void OnMouseExit()
+    //{
+    //    if (!blockColor)
+    //    {
+    //        ResetColor();
+    //    }
+    //}
 
     public void ResetColor()
     {
@@ -52,10 +53,20 @@ public class SquareBehaviour : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!blockColor)
-            rend.material.SetColor("_BaseColor", clickedColor);
+        //if (!blockColor)
+        //{
+        //    rend.material.SetColor("_BaseColor", clickedColor);
+        //}
         Board.Instance.SquareClicked(this);
     }
+
+    //private void OnMouseUp()
+    //{
+    //    if (!blockColor)
+    //    {
+    //        ResetColor();
+    //    }
+    //}
 
     public Square Square
     {

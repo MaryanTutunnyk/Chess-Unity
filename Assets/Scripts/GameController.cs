@@ -14,31 +14,27 @@ public class GameController : Singleton<GameController>
     private const string gameWithRealPlayerName = "GameWithRealPlayer";
     private const string gameWithVirtualPlayerName = "GameWithVirtualPlayer";
 
+    [SerializeField] private Transform piecesParent;
+
     [SerializeField] private GameObject kingPrefab, queenPrefab, rookPrefab, bishopPrefab, knightPrefab, pawnPrefab;
 
     [SerializeField] private Material materialWhite, materialBlack;
 
-    [SerializeField]
-    private CanvasGroup cg;
-    [SerializeField]
-    private TextMeshProUGUI textEnd, textButtonChange;
+    [SerializeField] private CanvasGroup cg;
+    [SerializeField] private TextMeshProUGUI textEnd;
 
-    [SerializeField]
-    private int queenValue;
-    [SerializeField]
-    private SquareTableValues queenSquareTableValues;
+    [SerializeField] private int queenValue;
+    [SerializeField] private SquareTableValues queenSquareTableValues;
 
     private Player playerOne, playerTwo;
     private Player actualPlayer, otherPlayer;
 
+    public event Action<bool> OnChangeTurns;
+
     private MiniMax miniMax;
     private List<PieceBehaviour> allPiecesBehaviour;
 
-    private bool is3D = true;
-
-    [SerializeField] private CameraController cameraController;
-
-    void Start()
+    private void Start()
     {
         playerOne = new Player(materialWhite, Player.PlayerType.HUMAN, 7);
 
@@ -64,7 +60,10 @@ public class GameController : Singleton<GameController>
         actualPlayer = playerOne;
         otherPlayer = playerTwo;
 
-        cameraController.SwitchCamera(true);
+        if (OnChangeTurns != null)
+        {
+            OnChangeTurns.Invoke(true);
+        }
 
         allPiecesBehaviour = new List<PieceBehaviour>(GameObject.FindObjectsOfType<PieceBehaviour>());
 
@@ -137,7 +136,7 @@ public class GameController : Singleton<GameController>
                 break;
         }
 
-        var piece = ((GameObject)Instantiate(prefab)).GetComponent<PieceBehaviour>();
+        var piece = ((GameObject)Instantiate(prefab, piecesParent)).GetComponent<PieceBehaviour>();
         piece.InitGraphics(player.ID);
         piece.ChangeMaterial(player.AsignedMaterial);
         piece.transform.position = new Vector3(squareBehaviour.transform.position.x, piece.transform.position.y, squareBehaviour.transform.position.z);
@@ -146,22 +145,7 @@ public class GameController : Singleton<GameController>
 
     }
 
-    public void ChangeGraphicMode()
-    {
-        is3D = !is3D;
-
-        cameraController.SwitchGraphicMode(!is3D);
-
-        for (int i = 0; i < allPiecesBehaviour.Count; i++)
-        {
-            if (allPiecesBehaviour[i] != null)
-            {
-                allPiecesBehaviour[i].SwitchGraphicMode(!is3D);
-            }
-        }
-    }
-
-    public void Reset()
+    public void GoToMainMenu()
     {
         SceneManager.LoadScene(0);
     }
@@ -170,6 +154,7 @@ public class GameController : Singleton<GameController>
     {
         var piece = new Queen(queenValue, queenSquareTableValues, square, player);
     }
+
     public void ChangeTurns()
     {
         if (actualPlayer == playerOne)
@@ -177,14 +162,20 @@ public class GameController : Singleton<GameController>
             actualPlayer = playerTwo;
             otherPlayer = playerOne;
 
-            cameraController.SwitchCamera(false);
+            if (OnChangeTurns != null)
+            {
+                OnChangeTurns.Invoke(false);
+            }
         }
         else
         {
             actualPlayer = playerOne;
             otherPlayer = playerTwo;
 
-            cameraController.SwitchCamera(true);
+            if (OnChangeTurns != null)
+            {
+                OnChangeTurns.Invoke(true);
+            }
         }
     }
 
@@ -213,6 +204,18 @@ public class GameController : Singleton<GameController>
             textEnd.text = "Гравець: " + otherPlayer.ID + " переміг";
         }
     }
+
+    public void SwitchGraphicMode(bool is3D)
+    {
+        for (int i = 0; i < allPiecesBehaviour.Count; i++)
+        {
+            if (allPiecesBehaviour[i] != null)
+            {
+                allPiecesBehaviour[i].SwitchGraphicMode(is3D);
+            }
+        }
+    }
+
     public Player ActualPlayer
     {
         get

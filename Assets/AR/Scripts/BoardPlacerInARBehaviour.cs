@@ -9,12 +9,15 @@ using UnityEngine.XR.ARFoundation;
 public class BoardPlacerInARBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private ARRaycastManager arRaycastManager;
+    [SerializeField] private ARPlaneManager arPlaneManager;
     [SerializeField] private List<ARRaycastHit> arRaycastHits = new List<ARRaycastHit>();
     [SerializeField] private Camera arCamera;
 
     [SerializeField] private Transform boardParent;
     [SerializeField] private GameObject boardPrefab;
-    private Transform board;
+    [SerializeField] private Transform board;
+
+    [SerializeField] private GameObject physicBoard;
 
     [SerializeField] private float maxDistance;
     private int interactableLayer;
@@ -40,6 +43,27 @@ public class BoardPlacerInARBehaviour : MonoBehaviour, IPointerDownHandler, IPoi
     private void Awake()
     {
         interactableLayer = 1 << LayerMask.NameToLayer("Interactable");
+    }
+
+    private void Start()
+    {
+        board.gameObject.SetActive(false);
+        physicBoard.SetActive(false);
+    }
+
+    public void ActivateBoard()
+    {
+        foreach (ARTrackable arTrackable in arPlaneManager.trackables)
+        {
+            arTrackable.gameObject.SetActive(false);
+        }
+        arPlaneManager.enabled = false;
+
+        Destroy(transform.parent.gameObject);
+        Destroy(selectionArea.gameObject);
+
+        Destroy(board.GetComponent<BoxCollider>());
+        physicBoard.SetActive(true);
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -92,7 +116,9 @@ public class BoardPlacerInARBehaviour : MonoBehaviour, IPointerDownHandler, IPoi
             isBoardPlaced = true;
             isBoardSelected = true;
 
-            board = Instantiate(boardPrefab, boardParent).transform;
+            //board = Instantiate(boardPrefab, boardParent).transform;
+            board.gameObject.SetActive(true);
+
             UpdateBoardParentPose(arRaycastHits);
 
             currentRotation = boardParent.localEulerAngles;

@@ -15,7 +15,6 @@ public class Board : Singleton<Board>
         base.Awake();
         squareMatrix = new Square[8, 8];
         squareBehaviourMatrix = new SquareBehaviour[8, 8];
-        //var gameSquares = GameObject.Find("LogicBoard").transform;
         int counter = 0;
         for (int i = 0; i < 8; i++)
         {
@@ -28,6 +27,7 @@ public class Board : Singleton<Board>
             }
         }
     }
+
     public void SquareClicked(SquareBehaviour square)
     {
         if (square.Square.PieceContainer != null && square.Square.PieceContainer.Propietary.Equals(GameController.Instance.ActualPlayer) &&
@@ -53,6 +53,7 @@ public class Board : Singleton<Board>
             GameController.Instance.EvaluatePlayers();
         }
     }
+
     private Move GetMoveFromPossibles(Square square)
     {
         for (int i = 0; i < possibleMovesActive.Count; i++)
