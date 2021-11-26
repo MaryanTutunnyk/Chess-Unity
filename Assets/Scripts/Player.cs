@@ -177,7 +177,7 @@ public class Player
     {
         for (int i = 0; i < pieces.Count; i++)
         {
-            for (int j = 0; j < pieces[i].PossibleMoves.Count; j++)
+            if (pieces[i].PossibleMoves.Count > 0)
             {
                 return false;
             }
