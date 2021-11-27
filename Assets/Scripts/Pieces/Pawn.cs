@@ -135,7 +135,6 @@ public class Pawn : Piece {
     {
         if (possibleMoves[possibleMoves.Count-1].Square.Y == 0 || possibleMoves[possibleMoves.Count-1].Square.Y == 7)
         {
-
             int number = Propietary.ReturnNumberPiece(this);
             possibleMoves[possibleMoves.Count - 1].RegisterCallback(() =>
             {
@@ -154,7 +153,7 @@ public class Pawn : Piece {
             possibleMoves[possibleMoves.Count - 1].RegisterCallbackToReset(() =>
             {
                 this.Propietary.DestroyLastPiece();
-                this.Propietary.AddPieceInNumber(this,number); 
+                this.Propietary.AddPieceInNumber(this, number); 
             }); 
         }
     }

@@ -55,10 +55,7 @@ public class Queen : Piece
                 possibleMoves.Add(new Move(board[y, x]));
             }
         }
-
     }
-
-
 
     public override void Evaluate(Square[,] b)
     {
@@ -79,7 +76,6 @@ public class Queen : Piece
 
         for (int i = 1; i < 8; i++)
         {
-
             if (rightUp) EvaluateBoardInPosition(board, actualX + i, actualY + i, out rightUp);
             if (rightDown) EvaluateBoardInPosition(board, actualX + i, actualY - i, out rightDown);
             if (leftDown) EvaluateBoardInPosition(board, actualX - i, actualY - i, out leftDown);
@@ -89,12 +85,6 @@ public class Queen : Piece
             if (left) EvaluateBoardInPosition(board, actualX - i, actualY, out left);
             if (up) EvaluateBoardInPosition(board, actualX, actualY + i, out up);
             if (down) EvaluateBoardInPosition(board, actualX, actualY - i, out down);
-
-
         }
-
     }
-
-
-
 }

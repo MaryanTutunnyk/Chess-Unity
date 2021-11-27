@@ -15,19 +15,31 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private Toggle gameWithRealPlayer;
     [SerializeField] private Toggle gameWithVirtualPlayer;
 
+    [SerializeField] private Toggle gameWithAR;
+
     public void GameWithAISelect()
     {
-        gameWithRealPlayer.Select();
+        //gameWithRealPlayer.Select();
     }
 
     public void GameWithRealPlayerSelect()
     {
-        gameWithRealPlayer.Select();
+        //gameWithRealPlayer.Select();
     }
 
     public void GameWithVirtualPlayerSelect()
     {
-        gameWithVirtualPlayer.Select();
+        //gameWithVirtualPlayer.Select();
+    }
+
+    public void GameWithoutARSelect()
+    {
+        //gameWithoutAR.Select();
+    }
+
+    public void GameWithARSelect()
+    {
+        //gameWithAR.Select();
     }
 
     public void GoToGameScene()
@@ -46,6 +58,6 @@ public class MainMenuController : MonoBehaviour
         }
         PlayerPrefs.Save();
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(gameWithAR.isOn ? 1 : 2);
     }
 }

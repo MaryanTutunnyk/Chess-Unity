@@ -22,11 +22,9 @@ public class PieceBehaviour : MonoBehaviour
         {
             return piece;
         }
-
     }
 
-
-    void Awake()
+    private void Awake()
     {
         values.Init();
         switch (type)
@@ -65,10 +63,10 @@ public class PieceBehaviour : MonoBehaviour
         child2D.SetActive(false);
     }
 
-    public void SwitchGraphicMode(bool orthographic)
+    public void SwitchGraphicMode(bool is3D)
     {
-        child2D.SetActive(orthographic);
-        child3D.SetActive(!orthographic);
+        child2D.SetActive(!is3D);
+        child3D.SetActive(is3D);
     }
 
     public void ChangeMaterial(Material material)
@@ -79,5 +77,4 @@ public class PieceBehaviour : MonoBehaviour
             rends[i].material = material;
         }
     }
-
 }
