@@ -7,11 +7,9 @@ public class MiniMax
     private Piece pieceToMove;
     private Move bestMove;
     private int maxDepth = 3;
-    private int vueltas = 0;
 
     public void RunMiniMax(Player maxPlayer, Player minPlayer, Square[,] board)
     {
-        vueltas = 0;
         int maxValue = MiniMaxFunctionRoot(maxPlayer, minPlayer, board);
 
         pieceToMove.Move(bestMove.Square.RelatedBehaviour);
@@ -81,8 +79,6 @@ public class MiniMax
             var moves = actualPlayer.Pieces[i].PossibleMoves;
             for (int j = 0; j < actualPlayer.Pieces[i].PossibleMoves.Count; j++)
             {
-                vueltas++;
-
                 var previousPiece = moves[j].Square.PieceContainer;
                 var previousSquare = piece.ActualSquare;
 

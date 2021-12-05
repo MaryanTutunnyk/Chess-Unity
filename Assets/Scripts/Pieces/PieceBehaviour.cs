@@ -4,25 +4,19 @@ using UnityEngine;
 
 public class PieceBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private PieceType type;
-    [SerializeField]
-    private int pieceValue;
-    [SerializeField]
-    private SquareTableValues values;
+    [SerializeField] private PieceType type;
+    [SerializeField] private int pieceValue;
+    [SerializeField] private SquareTableValues values;
+
     private GameObject child3D, child2D;
+
     [SerializeField]
     private Sprite spriteWhite, spriteBlack;
     private SpriteRenderer spriteRend;
+
     private Piece piece;
 
-    public Piece Piece
-    {
-        get
-        {
-            return piece;
-        }
-    }
+    public Piece Piece => piece;
 
     private void Awake()
     {
@@ -56,9 +50,9 @@ public class PieceBehaviour : MonoBehaviour
 
     public void InitGraphics(int id)
     {
-        child3D = this.transform.GetChild(0).gameObject;
-        child2D = this.transform.GetChild(1).gameObject;
-        spriteRend = this.GetComponentInChildren<SpriteRenderer>();
+        child3D = transform.GetChild(0).gameObject;
+        child2D = transform.GetChild(1).gameObject;
+        spriteRend = GetComponentInChildren<SpriteRenderer>();
         spriteRend.sprite = id == 0 ? spriteWhite : spriteBlack;
         child2D.SetActive(false);
     }
@@ -71,7 +65,7 @@ public class PieceBehaviour : MonoBehaviour
 
     public void ChangeMaterial(Material material)
     {
-        var rends = this.GetComponentsInChildren<MeshRenderer>();
+        var rends = GetComponentsInChildren<MeshRenderer>();
         for (int i = 0; i < rends.Length; i++)
         {
             rends[i].material = material;

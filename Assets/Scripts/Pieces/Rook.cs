@@ -11,7 +11,6 @@ public class Rook : Piece
     }
     public Rook()
     {
-
     }
 
     public override void Move(SquareBehaviour destiny)

@@ -7,8 +7,23 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
 
+public enum PieceType
+{
+    PAWN,
+    KING,
+    QUEEN,
+    KNIGHT,
+    BISHOP,
+    ROOK
+}
+
 public class GameController : Singleton<GameController>
 {
+    [SerializeField] private bool isARScene;
+
+    private bool shouldUpdateCamera;
+    public bool ShouldUpdateCamera => shouldUpdateCamera;
+
     private const string gameName = "Game";
     private const string gameWithAIName = "GameWithAI";
     private const string gameWithRealPlayerName = "GameWithRealPlayer";
@@ -29,27 +44,37 @@ public class GameController : Singleton<GameController>
     private Player playerOne, playerTwo;
     private Player actualPlayer, otherPlayer;
 
+    public Player ActualPlayer => actualPlayer;
+    public Player PlayerOne => playerOne;
+
     public event Action<bool> OnChangeTurns;
 
     private MiniMax miniMax;
     private List<PieceBehaviour> allPiecesBehaviour;
 
-    private void Start()
+    private bool isNetworkGame;
+    public bool IsNetworkGame => isNetworkGame;
+
+    protected override void Awake()
     {
-        playerOne = new Player(materialWhite, Player.PlayerType.HUMAN, 7);
+        base.Awake();
+
+        playerOne = new Player(materialWhite, PlayerType.HUMAN, 7);
 
         string game = PlayerPrefs.GetString(gameName);
         if (game == gameWithAIName)
         {
-            playerTwo = new Player(materialBlack, Player.PlayerType.AI);
+            playerTwo = new Player(materialBlack, PlayerType.AI);
         }
-        if (game == gameWithRealPlayerName)
+        else if (game == gameWithRealPlayerName)
         {
-            playerTwo = new Player(materialBlack, Player.PlayerType.HUMAN, 7);
+            playerTwo = new Player(materialBlack, PlayerType.HUMAN, 7);
+            shouldUpdateCamera = true;
         }
-        if (game == gameWithVirtualPlayerName)
+        else if (game == gameWithVirtualPlayerName)
         {
-
+            playerTwo = new Player(materialBlack, PlayerType.HUMAN, 7);
+            isNetworkGame = true;
         }
 
         miniMax = new MiniMax();
@@ -60,14 +85,36 @@ public class GameController : Singleton<GameController>
         actualPlayer = playerOne;
         otherPlayer = playerTwo;
 
-        if (OnChangeTurns != null)
-        {
-            OnChangeTurns.Invoke(true);
-        }
-
         allPiecesBehaviour = new List<PieceBehaviour>(GameObject.FindObjectsOfType<PieceBehaviour>());
 
         EvaluatePlayers();
+
+        if (!isARScene)
+        {
+            ConnectToNetwork();
+            UpdateCamera();
+        }
+        else
+        {
+            Board.Instance.ActivateBoardHolder(false);
+            Board.Instance.ActivatePhysicalBoard(false);
+        }
+    }
+
+    public void ConnectToNetwork()
+    {
+        if (isNetworkGame)
+        {
+            NetworkController.Instance.Connect();
+        }
+    }
+
+    public void UpdateCamera()
+    {
+        if (!isNetworkGame)
+        {
+            CameraController.Instance.SwitchCamera(actualPlayer == playerOne);
+        }
     }
 
     private void InstantiatePlayerOnePieces()
@@ -161,21 +208,15 @@ public class GameController : Singleton<GameController>
         {
             actualPlayer = playerTwo;
             otherPlayer = playerOne;
-
-            if (OnChangeTurns != null)
-            {
-                OnChangeTurns.Invoke(false);
-            }
         }
         else
         {
             actualPlayer = playerOne;
             otherPlayer = playerTwo;
-
-            if (OnChangeTurns != null)
-            {
-                OnChangeTurns.Invoke(true);
-            }
+        }
+        if (OnChangeTurns != null)
+        {
+            OnChangeTurns.Invoke(actualPlayer == playerOne);
         }
     }
 
@@ -191,7 +232,7 @@ public class GameController : Singleton<GameController>
 
         if (!actualPlayer.CheckIfCheckMate())
         {
-            if (actualPlayer.Type == Player.PlayerType.AI)
+            if (actualPlayer.Type == PlayerType.AI)
             {
                 miniMax.RunMiniMax(actualPlayer, otherPlayer, Board.Instance.SquareMatrix);
             }
@@ -216,20 +257,8 @@ public class GameController : Singleton<GameController>
         }
     }
 
-    public Player ActualPlayer
+    public void StartGame()
     {
-        get
-        {
-            return actualPlayer;
-        }
+        CameraController.Instance.SwitchCamera(NetworkController.Instance.CurrentTeam == 0);
     }
-}
-public enum PieceType
-{
-    PAWN,
-    KING,
-    QUEEN,
-    KNIGHT,
-    BISHOP,
-    ROOK
 }

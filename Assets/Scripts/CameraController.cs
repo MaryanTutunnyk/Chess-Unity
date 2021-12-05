@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class CameraController : Singleton<CameraController>
 {
     [SerializeField] private Cinemachine.CinemachineVirtualCamera playerOneCamera, playerTwoCamera;
 
@@ -11,29 +11,32 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI switchOrthographicModeButtonText;
 
-    [SerializeField] private GameController gameController;
-
     private bool is3D = true;
 
-    private void Awake()
+    protected override void Awake()
     {
-        gameController.OnChangeTurns += OnChangeTurns;
+        base.Awake();
+
+        GameController.Instance.OnChangeTurns += OnChangeTurns;
     }
 
     private void OnDestroy()
     {
-        if (gameController != null)
+        if (GameController.Instance != null)
         {
-            gameController.OnChangeTurns -= OnChangeTurns;
+            GameController.Instance.OnChangeTurns -= OnChangeTurns;
         }
     }
 
     private void OnChangeTurns(bool playerOneActive)
     {
-        SwitchCamera(playerOneActive);
+        if (GameController.Instance.ShouldUpdateCamera)
+        {
+            SwitchCamera(playerOneActive);
+        }
     }
 
-    private void SwitchCamera(bool activeCamera)
+    public void SwitchCamera(bool activeCamera)
     {
         playerOneCamera.gameObject.SetActive(activeCamera);
         playerTwoCamera.gameObject.SetActive(!activeCamera);
@@ -43,7 +46,7 @@ public class CameraController : MonoBehaviour
     {
         is3D = !is3D;
         SwitchGraphicMode(!is3D);
-        gameController.SwitchGraphicMode(is3D);
+        GameController.Instance.SwitchGraphicMode(is3D);
     }
 
     private void SwitchGraphicMode(bool orthographic)

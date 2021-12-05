@@ -13,6 +13,7 @@
     "com.unity.render-pipelines.lightweight": "10.6.0",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.4.8",
+    "com.unity.transport": "1.0.0-pre.9",
     "com.unity.ugui": "1.0.0",
     "com.unity.xr.arcore": "4.1.7",
     "com.unity.xr.arfoundation": "4.1.7",

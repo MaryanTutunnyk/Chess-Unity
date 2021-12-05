@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -748,8 +748,8 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 1
+  m_ReferenceResolution: {x: 2200, y: 1000}
+  m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -934,8 +934,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0413\u0440\u0430 \u043F\u0440\u043E\u0442\u0438 \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0433\u043E
-    \u0433\u0440\u0430\u0432\u0446\u044F"
+  m_text: "\u0413\u0440\u0430 \u043D\u0430 \u043E\u0434\u043D\u043E\u043C\u0443 \u043A\u043E\u043C\u043F'\u044E\u0442\u0435\u0440\u0456"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0fc1e1687610a740b968f2d4152207d, type: 2}
   m_sharedMaterial: {fileID: 7669040522442275733, guid: b0fc1e1687610a740b968f2d4152207d,
@@ -963,7 +962,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 69.5
+  m_fontSize: 72
   m_fontSizeBase: 56
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2007,7 +2006,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0413\u0440\u0430 \u0447\u0435\u0440\u0435\u0437 \u0456\u043D\u0442\u0435\u0440\u043D\u0435\u0442"
+  m_text: "\u0413\u0440\u0430 \u0447\u0435\u0440\u0435\u0437 \u043B\u043E\u043A\u0430\u043B\u044C\u043D\u0443
+    \u043C\u0435\u0440\u0435\u0436\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0fc1e1687610a740b968f2d4152207d, type: 2}
   m_sharedMaterial: {fileID: 7669040522442275733, guid: b0fc1e1687610a740b968f2d4152207d,
@@ -2035,7 +2035,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 70.7
   m_fontSizeBase: 56
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2182,7 +2182,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1903444014
 GameObject:
   m_ObjectHideFlags: 0

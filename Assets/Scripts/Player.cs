@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+public enum PlayerType { AI, HUMAN }
+
 public class Player
 {
-    public enum PlayerType
-    {
-        AI,
-        HUMAN
-    }
-
     private static int playerID = 0;
     private int iD;
 

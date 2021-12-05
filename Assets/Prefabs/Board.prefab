@@ -59,8 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &9145417263083882019
 MeshFilter:
@@ -170,8 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &7928677357436371787
 MeshFilter:
@@ -281,8 +277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &7814407052691707288
 MeshFilter:
@@ -392,8 +386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &4259232586804314880
 MeshFilter:
@@ -503,8 +495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &6507022999917403348
 MeshFilter:
@@ -614,8 +604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &3621556220026569613
 MeshFilter:
@@ -725,8 +713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &5721884548217706444
 MeshFilter:
@@ -836,8 +822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &1476260838411394111
 MeshFilter:
@@ -947,8 +931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &6582868923683269069
 MeshFilter:
@@ -1058,8 +1040,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &798009782765128067
 MeshFilter:
@@ -1169,8 +1149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &9065267665255346112
 MeshFilter:
@@ -1280,8 +1258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &820199065486255956
 MeshFilter:
@@ -1391,8 +1367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &4000784605208237491
 MeshFilter:
@@ -1502,8 +1476,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &8864124994890239107
 MeshFilter:
@@ -1613,8 +1585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &2465728157437561993
 MeshFilter:
@@ -1724,8 +1694,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &2398365301114434944
 MeshFilter:
@@ -1835,8 +1803,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &7098413451892491458
 MeshFilter:
@@ -1946,8 +1912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &3569376990250896209
 MeshFilter:
@@ -2057,8 +2021,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &8495425083589461581
 MeshFilter:
@@ -2168,8 +2130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &4459408367819346049
 MeshFilter:
@@ -2279,8 +2239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &2488758710907542839
 MeshFilter:
@@ -2390,8 +2348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &6453896696262055032
 MeshFilter:
@@ -2501,8 +2457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &7970238666394661357
 MeshFilter:
@@ -2612,8 +2566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &508395505142825443
 MeshFilter:
@@ -2723,8 +2675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &7431504232914565893
 MeshFilter:
@@ -2834,8 +2784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &8700144214198745233
 MeshFilter:
@@ -2945,8 +2893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &5486577673800966963
 MeshFilter:
@@ -3056,8 +3002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &6528049289673430834
 MeshFilter:
@@ -3167,8 +3111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &7142905286928783066
 MeshFilter:
@@ -3278,8 +3220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &5623254491091178745
 MeshFilter:
@@ -3389,8 +3329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &1981613608180154840
 MeshFilter:
@@ -3500,8 +3438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &3899740462448761289
 MeshFilter:
@@ -3611,8 +3547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &4117186256384303487
 MeshFilter:
@@ -3722,8 +3656,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &3598344963339375653
 MeshFilter:
@@ -3833,8 +3765,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &3406870161904738455
 MeshFilter:
@@ -3944,8 +3874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &1261186941148688014
 MeshFilter:
@@ -4055,8 +3983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &210483651243488270
 MeshFilter:
@@ -4166,8 +4092,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &365946592690086199
 MeshFilter:
@@ -4277,8 +4201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &1628459863968155835
 MeshFilter:
@@ -4388,8 +4310,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &657435263612049347
 MeshFilter:
@@ -4499,8 +4419,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &5501499179146067627
 MeshFilter:
@@ -4610,8 +4528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &3039677641568853730
 MeshFilter:
@@ -4721,8 +4637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &4904413569338352741
 MeshFilter:
@@ -4832,8 +4746,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &7319502351733397242
 MeshFilter:
@@ -4943,8 +4855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &8943360652690797196
 MeshFilter:
@@ -5054,8 +4964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &5194129021156043325
 MeshFilter:
@@ -5165,8 +5073,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &203831092023707911
 MeshFilter:
@@ -5276,8 +5182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &5698647100781700855
 MeshFilter:
@@ -5387,8 +5291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &1456130277387087386
 MeshFilter:
@@ -5498,8 +5400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &2367297641215465683
 MeshFilter:
@@ -5609,8 +5509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &4806447141688938542
 MeshFilter:
@@ -5720,8 +5618,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &8761278813497305090
 MeshFilter:
@@ -5831,8 +5727,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &8091641646290328437
 MeshFilter:
@@ -5942,8 +5836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &8268255756240654453
 MeshFilter:
@@ -6053,8 +5945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &1157950356487601384
 MeshFilter:
@@ -6164,8 +6054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &5443316714063425377
 MeshFilter:
@@ -6275,8 +6163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &6742230859781335344
 MeshFilter:
@@ -6386,8 +6272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &8932489784471685761
 MeshFilter:
@@ -6497,8 +6381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &1046975177680852477
 MeshFilter:
@@ -6608,8 +6490,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &8480222136421386617
 MeshFilter:
@@ -6719,8 +6599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &3106798003622877027
 MeshFilter:
@@ -6830,8 +6708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &1774287277151789397
 MeshFilter:
@@ -6941,8 +6817,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &2878146808328080983
 MeshFilter:
@@ -7100,6 +6974,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e053ea00897fa304ea23f9e2cc004efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isARScene: 0
+  boardHolder: {fileID: 0}
+  physicalBoard: {fileID: 2100018109}
 --- !u!1 &2105925160
 GameObject:
   m_ObjectHideFlags: 0
@@ -7159,8 +7036,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63409fe42cb1c4c86642abf54a2c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9647059, b: 0, a: 0.46666667}
-  clickedColor: {r: 1, g: 0.9647059, b: 0, a: 0.78431374}
   possibleColor: {r: 1, g: 0, b: 0, a: 0.6509804}
 --- !u!33 &3269788922915704810
 MeshFilter:

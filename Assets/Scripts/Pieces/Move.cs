@@ -51,8 +51,6 @@ public class Move
         {
             return square;
         }
-
-
     }
 
 
@@ -63,6 +61,5 @@ public class Move
         {
             return isHarmMove;
         }
-
     }
 }

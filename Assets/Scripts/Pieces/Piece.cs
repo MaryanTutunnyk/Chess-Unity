@@ -33,7 +33,6 @@ public class Piece
 
     public virtual void Evaluate(Square[,] board = null)
     {
-
     }
 
     public int EvaluateBoardScore()

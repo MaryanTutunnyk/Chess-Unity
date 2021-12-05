@@ -5,39 +5,20 @@ using UnityEngine;
 public class SquareBehaviour : MonoBehaviour
 {
     private Square square;
-    [SerializeField]
-    private Color hoverColor, clickedColor, possibleColor;
+
     private Renderer rend;
     private Color originalColor;
+    [SerializeField] private Color possibleColor;
 
     private bool blockColor = false;
 
     private void Awake()
     {
         this.square = new Square();
+
+        rend = GetComponent<Renderer>();
+        originalColor = rend.sharedMaterial.GetColor("_BaseColor");
     }
-
-    private void Start()
-    {
-        this.rend = this.GetComponent<Renderer>();
-        originalColor = this.rend.sharedMaterial.GetColor("_BaseColor");
-    }
-
-    //private void OnMouseEnter()
-    //{
-    //    if (!blockColor)
-    //    {
-    //        rend.material.SetColor("_BaseColor", hoverColor);
-    //    }
-    //}
-
-    //private void OnMouseExit()
-    //{
-    //    if (!blockColor)
-    //    {
-    //        ResetColor();
-    //    }
-    //}
 
     public void ResetColor()
     {
@@ -53,34 +34,10 @@ public class SquareBehaviour : MonoBehaviour
 
     private void OnMouseDown()
     {
-        //if (!blockColor)
-        //{
-        //    rend.material.SetColor("_BaseColor", clickedColor);
-        //}
         Board.Instance.SquareClicked(this);
     }
 
-    //private void OnMouseUp()
-    //{
-    //    if (!blockColor)
-    //    {
-    //        ResetColor();
-    //    }
-    //}
+    public Square Square => square;
 
-    public Square Square
-    {
-        get
-        {
-            return square;
-        }
-    }
-
-    public bool BlockColor
-    {
-        get
-        {
-            return blockColor;
-        }
-    }
+    public bool BlockColor => blockColor;
 }

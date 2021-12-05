@@ -45,7 +45,6 @@ public class Square
         return pieceContainer != null;
     }
 
-
     public override bool Equals(object obj)
     {
         Square otherSquare = obj as Square;
@@ -65,29 +64,9 @@ public class Square
         }
     }
 
+    public int X => x;
 
-    public int X
-    {
-        get
-        {
-            return x;
-        }
+    public int Y => y;
 
-    }
-
-    public int Y
-    {
-        get
-        {
-            return y;
-        }
-    }
-
-    public Piece PieceContainer
-    {
-        get
-        {
-            return pieceContainer;
-        }
-    }
+    public Piece PieceContainer => pieceContainer;
 }

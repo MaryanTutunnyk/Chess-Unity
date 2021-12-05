@@ -12,7 +12,6 @@ public class King : Piece
 
     public King()
     {
-
     }
 
     public override void Move(SquareBehaviour destiny)
@@ -31,7 +30,6 @@ public class King : Piece
         king.possibleMoves = new List<Move>();
         return king;
     }
-
 
     private void EvaluateBoardInPosition(Square[,] board, int x, int y, out bool flag)
     {
@@ -87,10 +85,6 @@ public class King : Piece
         if (left) EvaluateBoardInPosition(board, actualX - i, actualY, out left);
         if (up) EvaluateBoardInPosition(board, actualX, actualY + i, out up);
         if (down) EvaluateBoardInPosition(board, actualX, actualY - i, out down);
-
-
-
-
     }
 
 
@@ -107,8 +101,6 @@ public class King : Piece
             board = b;
         }
 
-
-
         if (!isMoved && otherPlayer != null && !otherPlayer.CheckIfSquareIsInMoves(this.actualSquare)) //Si no es jaque ahora
         {
             for (int i = actualSquare.X + 1; i < 7; i++)
@@ -118,9 +110,7 @@ public class King : Piece
                     canDoCastling = false;
                     break;
                 }
-
             }
-
 
             if (!isMoved && canDoCastling && board[actualSquare.Y, 7].PieceContainer != null && board[actualSquare.Y, 7].PieceContainer is Rook)
             {
@@ -151,7 +141,6 @@ public class King : Piece
                 }
             }
 
-
             canDoCastling = true;
 
             for (int i = actualSquare.X - 1; i > 0; i--)
@@ -161,7 +150,6 @@ public class King : Piece
                     canDoCastling = false;
                     break;
                 }
-
             }
 
             if (!isMoved && canDoCastling && board[actualSquare.Y, 0].PieceContainer != null && board[actualSquare.Y, 0].PieceContainer is Rook)
@@ -190,18 +178,11 @@ public class King : Piece
                         rook.Move(board[previousY, previousX]);
                     });
 
-
                     possibleMoves.Add(move);
                 }
             }
-
-
-
         }
-
-
     }
-
 }
 
 

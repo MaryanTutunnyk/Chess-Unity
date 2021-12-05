@@ -14,10 +14,7 @@ public class BoardPlacerInARBehaviour : MonoBehaviour, IPointerDownHandler, IPoi
     [SerializeField] private Camera arCamera;
 
     [SerializeField] private Transform boardParent;
-    [SerializeField] private GameObject boardPrefab;
     [SerializeField] private Transform board;
-
-    [SerializeField] private GameObject physicBoard;
 
     [SerializeField] private float maxDistance;
     private int interactableLayer;
@@ -45,12 +42,6 @@ public class BoardPlacerInARBehaviour : MonoBehaviour, IPointerDownHandler, IPoi
         interactableLayer = 1 << LayerMask.NameToLayer("Interactable");
     }
 
-    private void Start()
-    {
-        board.gameObject.SetActive(false);
-        physicBoard.SetActive(false);
-    }
-
     public void ActivateBoard()
     {
         foreach (ARTrackable arTrackable in arPlaneManager.trackables)
@@ -63,7 +54,10 @@ public class BoardPlacerInARBehaviour : MonoBehaviour, IPointerDownHandler, IPoi
         Destroy(selectionArea.gameObject);
 
         Destroy(board.GetComponent<BoxCollider>());
-        physicBoard.SetActive(true);
+
+        Board.Instance.ActivatePhysicalBoard(true);
+
+        GameController.Instance.ConnectToNetwork();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -116,8 +110,7 @@ public class BoardPlacerInARBehaviour : MonoBehaviour, IPointerDownHandler, IPoi
             isBoardPlaced = true;
             isBoardSelected = true;
 
-            //board = Instantiate(boardPrefab, boardParent).transform;
-            board.gameObject.SetActive(true);
+            Board.Instance.ActivateBoardHolder(true);
 
             UpdateBoardParentPose(arRaycastHits);
 

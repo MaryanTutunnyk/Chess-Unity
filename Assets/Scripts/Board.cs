@@ -1,9 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Board : Singleton<Board>
 {
+    [SerializeField] private GameObject boardHolder;
+    [SerializeField] private GameObject physicalBoard;
+
     private Square[,] squareMatrix;
     private SquareBehaviour[,] squareBehaviourMatrix;
     private SquareBehaviour activeSquare = null;
@@ -13,6 +15,7 @@ public class Board : Singleton<Board>
     protected override void Awake()
     {
         base.Awake();
+
         squareMatrix = new Square[8, 8];
         squareBehaviourMatrix = new SquareBehaviour[8, 8];
         int counter = 0;
@@ -28,11 +31,33 @@ public class Board : Singleton<Board>
         }
     }
 
+    public void ActivateBoardHolder(bool activate)
+    {
+        boardHolder.SetActive(activate);
+    }
+
+    public void ActivatePhysicalBoard(bool activate)
+    {
+        physicalBoard.SetActive(activate);
+    }
+
+    public void MovePiece(int originalX, int originalY, int destinationX, int destinationY)
+    {
+        SquareBehaviour originalSquare = squareBehaviourMatrix[originalY, originalX];
+        SquareBehaviour destinationSquare = squareBehaviourMatrix[destinationY, destinationX];
+
+        possibleMovesActive = originalSquare.Square.PieceContainer.PossibleMoves;
+        originalSquare.Square.PieceContainer.Move(destinationSquare);
+        GetMoveFromPossibles(destinationSquare.Square).RunCallback();
+    }
+
     public void SquareClicked(SquareBehaviour square)
     {
+        bool canMove = (GameController.Instance.ActualPlayer == GameController.Instance.PlayerOne && NetworkController.Instance.CurrentTeam == 0) ||
+            (GameController.Instance.ActualPlayer != GameController.Instance.PlayerOne && NetworkController.Instance.CurrentTeam == 1) || !GameController.Instance.IsNetworkGame;
         if (square.Square.PieceContainer != null && square.Square.PieceContainer.Propietary.Equals(GameController.Instance.ActualPlayer) &&
             (activeSquare == null || activeSquare.Square.PieceContainer.Propietary.Equals(square.Square.PieceContainer.Propietary))
-            && square.Square.PieceContainer.Propietary.Type == Player.PlayerType.HUMAN)
+            && square.Square.PieceContainer.Propietary.Type == PlayerType.HUMAN && canMove)
         {
             ResetMoves();
             activeSquare = square;
@@ -42,11 +67,22 @@ public class Board : Singleton<Board>
                 possibleMovesActive[i].Square.RelatedBehaviour.MarkPossible();
             }
         }
-
         else if (activeSquare != null && square.BlockColor)
         {
             activeSquare.Square.PieceContainer.Move(square);
             GetMoveFromPossibles(square.Square).RunCallback();
+
+            if (GameController.Instance.IsNetworkGame)
+            {
+                NetMakeMove mm = new NetMakeMove();
+                mm.OriginalX = activeSquare.Square.X;
+                mm.OriginalY = activeSquare.Square.Y;
+                mm.DestinationX = square.Square.X;
+                mm.DestinationY = square.Square.Y;
+                mm.TeamID = NetworkController.Instance.CurrentTeam;
+                ClientBehaviour.Instance.SendToServer(mm);
+            }
+
             activeSquare = null;
             ResetMoves();
             GameController.Instance.ChangeTurns();
@@ -66,7 +102,7 @@ public class Board : Singleton<Board>
         return null;
     }
 
-    private void ResetMoves()
+    public void ResetMoves()
     {
         if (possibleMovesActive != null)
         {
@@ -76,6 +112,7 @@ public class Board : Singleton<Board>
             }
         }
     }
+
     public Square[,] GenerateBoardCopy()
     {
         Square[,] copy = new Square[8, 8];
@@ -88,6 +125,7 @@ public class Board : Singleton<Board>
         }
         return copy;
     }
+
     public Square[,] GenerateBoardCopy(Square[,] board)
     {
         Square[,] copy = new Square[8, 8];
@@ -101,19 +139,7 @@ public class Board : Singleton<Board>
         return copy;
     }
 
-    public Square[,] SquareMatrix
-    {
-        get
-        {
-            return squareMatrix;
-        }
-    }
+    public Square[,] SquareMatrix => squareMatrix;
 
-    public SquareBehaviour[,] SquareBehaviourMatrix
-    {
-        get
-        {
-            return squareBehaviourMatrix;
-        }
-    }
+    public SquareBehaviour[,] SquareBehaviourMatrix => squareBehaviourMatrix;
 }
